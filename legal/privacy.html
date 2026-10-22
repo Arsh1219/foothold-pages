@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Life Flip privacy policy</h1>
-<p class="meta">Version 1.1. Effective October 22, 2026.</p>
+<p class="meta">Version 1.2. Effective October 22, 2026.</p>
 
 <h2>The short version</h2>
 <p>Everything you put into the app stays on your iPhone. The climb needs no account, and no server of ours ever receives your plan, your quests or your answers. The one exception is the optional Friends tab: if you sign in there, the name you choose and the completions you decide to share are stored so your friends can see them. The only things that leave your phone are a small set of anonymous usage events, crash reports when the app fails, the purchase record Apple creates when you subscribe, and ad measurement signals that tell us which ad, if any, brought you to the app. We do not sell data and we do not show ads.</p>
@@ -42,6 +42,8 @@
   <li>Your plan: the program, the quests scheduled for each day and any custom quests you write.</li>
   <li>Your progress: which quests you marked done or skipped, the reason for a skip, day results, XP, level and streak.</li>
   <li>Your weekly reflections.</li>
+  <li>What you keep in Tools: food log entries and calories, water glasses, workouts, focus and breathing sessions, journal lines and the photos you attach to them, and your reading list.</li>
+  <li>The pledge you sign and the note you write to your future self during setup.</li>
   <li>Your settings: reminder times, appearance, day start hour and whether usage statistics are on.</li>
 </ul>
 <p>This data rides along in your normal iPhone backup under your control. The app does not sync it to iCloud or to anyone else in this version. You can export a copy or delete all of it at any time from Profile inside the app.</p>
@@ -49,15 +51,16 @@
 <h2>Anonymous usage statistics</h2>
 <p>The app sends a small set of anonymous usage events to Firebase Analytics, a service run by Google. Each event says that something happened, not what you wrote or answered. In plain words, the app may record:</p>
 <ul>
-  <li>Onboarding steps: that the welcome screen, the price screen, each quiz step (by step number and question id, never your answer), the plan preview and the paywall were shown, and that the quiz was completed.</li>
+  <li>Screens: which screen of the app was opened, by its name in the app, never what is on it.</li>
+  <li>Onboarding steps: that the welcome screen, each quiz step (by step number and question id, never your answer), the plan preview and the paywall were shown, and that the quiz was completed.</li>
   <li>Purchase steps: that a plan button was tapped, that the yearly offer behind the close button was shown or declined, that a checkout was closed without buying, that a free trial started, that a purchase or restore unlocked the app, and which plan was chosen along with its displayed price.</li>
   <li>Daily progress: that a quest was marked done or skipped (the quest id from our pool or the word custom, its difficulty and the skip reason), that all of a day's quests were done (the day number and how many quests were done out of how many), and that a rest day was used.</li>
   <li>Milestones: that your streak reached 7, 14, 21, 30, 44 or 66 days, that a phase was completed, that the full challenge was completed, that a challenge was reset or the program was switched.</li>
   <li>Permissions and surfaces: whether you allowed notifications, your answer to the tracking permission, that a widget was added, that the system review prompt was shown, and that usage statistics were turned off.</li>
 </ul>
-<p>Alongside these events the app keeps seven labels: your plan (free, monthly or yearly), your program, your difficulty, whether notifications are allowed, which pricing group you are in (with or without a free trial), your answer to the tracking permission, and the kind of source that brought you to the app (organic, Meta, TikTok, Apple Ads or other). RevenueCat, which records purchases for us, places new customers in a pricing group at random. The events travel with a random app instance identifier that is not linked to your name, email or Apple account. Firebase receives no advertising identifier and ad personalization is turned off in Firebase.</p>
-<p>The following never leave your phone: your quiz answers, quest titles, custom quest text, reflection text, wake or sleep times, your day by day history, and any name you type on your certificate.</p>
-<p>You can turn usage statistics off at any time in Profile under Usage statistics. After that the app sends one final event saying you opted out and nothing more. The same switch also stops ad measurement sharing, as described below.</p>
+<p>Alongside these events the app keeps eight labels: your plan (free, monthly or yearly), your program, your difficulty, whether notifications are allowed, which pricing group you are in (with or without a free trial), whether the paywall can be closed without subscribing, your answer to the tracking permission, and the kind of source that brought you to the app (organic, Meta, TikTok, Apple Ads or other). RevenueCat, which records purchases for us, places new customers in a pricing group at random. The events travel with a random app instance identifier that is not linked to your name, email or Apple account. Firebase receives no advertising identifier and ad personalization is turned off in Firebase.</p>
+<p>The following never leave your phone: your quiz answers, reflection text, wake or sleep times, your day by day history, everything you keep in Tools (food log, water, workouts, focus and breathing sessions, journal lines and photos, reading list), your signed pledge, the note to your future self, and any name you type on your certificate. Quest titles, including the ones you write yourself, stay on your phone too, unless you switch on sharing in Friends, described below.</p>
+<p>You can turn usage statistics off at any time in Profile with the Share usage statistics switch. After that the app sends one final event saying you opted out and nothing more. The same switch also limits ad measurement sharing, as described below.</p>
 
 <h2>Crash reports</h2>
 <p>If the app crashes, Firebase Crashlytics, also run by Google, receives a crash report so we can fix the problem. A report contains the device model, iOS version, app version, a timestamp and a technical trace of what the code was doing. It never contains your plan, quests, answers or reflections.</p>
@@ -71,21 +74,22 @@
   <li>Adjust, a mobile measurement company, records that the app was installed and opened, and two steps of the first visit: that the quiz was completed and that the paywall was shown. It uses an Adjust device identifier, the iPhone vendor identifier and, only if you allow tracking, the iPhone advertising identifier (IDFA). Adjust passes install information to Meta and TikTok so they can tell which of their ads led to the install, and TikTok also receives from Adjust the free trial and subscription events described below.</li>
   <li>The Meta app events tool records that the app was installed and opened, with an anonymous Meta install identifier and, only if you allow tracking, the IDFA.</li>
   <li>RevenueCat sends the start of a free trial, a subscription purchase and each renewal, with the price, to Meta and to Adjust, together with the identifiers above, so the ad networks can count which ads led to a subscription. It never sends your quests, answers or anything you write.</li>
+  <li>For Apple Ads, RevenueCat passes Apple's own attribution token to Apple, which answers whether an Apple Ads campaign led to the install. This works without the tracking permission and carries no advertising identifier.</li>
 </ul>
-<p>The app asks once, on the welcome screen or later on Home, whether it may track you across other apps and websites using the iPhone tracking permission. If you allow it, the IDFA is shared with Adjust and Meta for ad measurement. If you decline, the IDFA is never read or shared, and the app works exactly the same. Without the IDFA, installs and subscriptions are still counted in aggregate under the identifiers above, as Apple allows.</p>
-<p>To stop ad measurement sharing entirely, turn off Usage statistics in Profile. Adjust then stops passing anything to Meta and TikTok, and Meta is told to limit how it uses data from the app. Turning the switch back on restores both.</p>
+<p>The app asks once, on the welcome screen or later on Home, whether it may track you across other apps and websites using the iPhone tracking permission. If you allow it, the IDFA is shared with Adjust and Meta for ad measurement. If you decline, the IDFA is never read or shared, and the app works exactly the same. Nothing reaches Meta before you answer. Without the IDFA, installs, trials and subscriptions are still sent under the other identifiers above (the Adjust and vendor identifiers and the anonymous Meta install identifier), so the ad networks can count which ads worked.</p>
+<p>To limit ad measurement sharing, turn off Share usage statistics in Profile. Adjust then stops passing anything to Meta and TikTok, the IDFA is no longer shared with Meta, and Meta is told to limit how it uses data from the app. RevenueCat still reports trial and subscription events to Meta and Adjust from its servers, under the identifiers it already holds. To stop that too, email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. Turning the switch back on restores the rest.</p>
 
 <h2>Apple Health, only if you connect it</h2>
 <p>If you tap Connect Apple Health, the app asks iOS for read access to your steps, sleep and workouts. It reads the last 14 days to suggest starting targets and to tick a quest the phone already saw you do. Health data is processed on your iPhone only: it is never sent to us or to any third party, never used for advertising or marketing, and never stored in iCloud by the app. The app never writes to Health. Stop reading Health, on the same screen, clears the summary; you can also remove access in the Health app.</p>
 
 <h2>Friends, the one optional account</h2>
-<p>The Friends tab is optional and the rest of the app never needs it. If you open it and sign in with Apple, Google Firebase Authentication creates an account for you. The app asks Apple for no email address and no name, so neither reaches us. In Firebase Firestore, also run by Google, the app then stores the display name you type, a six character friend code, your friend list, and whether sharing is on. Only while sharing is on, a quest you complete posts its title and the day number. Your friends see it, and so does anyone signed in to Friends who opens the Public feed. Reactions and comments left on posts are stored with them. Nothing else from your plan, your answers or your logbook is sent.</p>
-<p>If you report a post, a comment or a person, we store the report (who reported, what was reported and a copy of the text) so we can review it within 24 hours. People you block, and posts you reported, are stored with your account so they stay hidden from you.</p>
-<p>You can turn sharing off at any time in the Friends tab. Delete account, in your profile inside the Friends tab, removes your account, your profile, your posts, your reactions and comments, and your entry in your friends' lists.</p>
+<p>The Friends tab is optional and the rest of the app never needs it. If you open it and sign in with Apple, Google Firebase Authentication creates an account for you. The app asks Apple for no email address and no name, so neither reaches us. In Firebase Firestore, also run by Google, the app then stores the display name you type, a six character friend code, your friend list, and whether sharing is on. Only while sharing is on, a quest you complete, including a custom quest you wrote, posts its title and the day number. Your friends see it, and so does anyone signed in to Friends who opens the Everyone feed. Reactions and comments left on posts are stored with them. Nothing else from your plan, your answers or your logbook is sent.</p>
+<p>If you report a post, a comment or a person, we store the report (who reported, what was reported and a copy of the text) so we can review it within 24 hours. A report stays after either account is deleted, so the review can finish and repeat abuse can be stopped. People you block, and posts you reported, are stored with your account so they stay hidden from you.</p>
+<p>You can turn sharing off at any time in the Friends tab or in Profile. Delete account, in your profile inside the Friends tab, or Delete Friends account in Profile, removes your account, your profile, your posts, your reactions and comments, and your entry in your friends' lists.</p>
 
 <h2>Who else handles data</h2>
 <ul>
-  <li>Google processes the anonymous usage events and crash reports on our behalf through Firebase, and, only if you use the Friends tab, your Friends account and what you share there.</li>
+  <li>Google processes the anonymous usage events and crash reports on our behalf through Firebase and stores the daily copy of the usage events in BigQuery, serves one remote setting (whether the paywall can be closed without subscribing) through Firebase Remote Config, and, only if you use the Friends tab, holds your Friends account and what you share there.</li>
   <li>Apple processes payments and holds your subscription.</li>
   <li>RevenueCat processes purchase records so we can track subscriptions, and passes subscription events to Meta and Adjust for ad measurement.</li>
   <li>Adjust measures which ads lead to installs and subscriptions and passes install and subscription events to Meta and TikTok.</li>
@@ -94,8 +98,8 @@
 <p>Each of these providers is bound to protect this data. Google, Apple, RevenueCat and Adjust use it only to provide their service to us. Meta and TikTok use ad measurement signals under their own terms and privacy policies, which is why the tracking permission and the Usage statistics switch exist. No one else receives any data from the app.</p>
 
 <h2>How long data is kept</h2>
-<p>Usage events are kept by Firebase Analytics for 14 months and then deleted automatically. Crash reports are kept for 90 days. Purchase records are kept for as long as needed to manage your subscription and to meet accounting rules. Your own content is not covered by any of this because it is never sent to us. It stays on your phone until you delete it. A Friends account and what you shared through it are kept until you delete the account.</p>
-<p>To have usage events already collected from your device deleted, turn off Usage statistics in Profile and email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. We will remove them.</p>
+<p>Usage events are kept by Firebase Analytics for 14 months and then deleted automatically. A daily copy of the same events is exported to our own Google Cloud project (BigQuery) for analysis and is deleted after the same 14 months. Crash reports are kept for 90 days. Purchase records are kept for as long as needed to manage your subscription and to meet accounting rules. Your own content is not covered by any of this because it is never sent to us. It stays on your phone until you delete it. A Friends account and what you shared through it are kept until you delete the account.</p>
+<p>To have usage events already collected from your device deleted, turn off Share usage statistics in Profile and email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. We will remove them.</p>
 
 <h2>No selling, no ads</h2>
 <p>We do not sell any data. The app shows no ads. Ad measurement, described above, only tells us which of our own ads brought you here.</p>
@@ -104,7 +108,7 @@
 <p>When you export your data from Profile, or share a milestone card or certificate, those files go wherever you choose to send them. Share them only with people you trust.</p>
 
 <h2>Deleting your data</h2>
-<p>Settings contains Delete all data. It permanently removes everything the app stored on your phone and returns you to the welcome screen. There is no copy anywhere else, so there is no undo. A Friends account is deleted separately with Delete account in your profile inside the Friends tab. Deleting your data does not cancel a subscription. Subscriptions are cancelled in iOS Settings.</p>
+<p>Profile contains Delete all data. It permanently removes everything the app stored on your phone and returns you to the welcome screen. There is no copy anywhere else, so there is no undo. A Friends account is deleted separately, with Delete Friends account in Profile or Delete account in your profile inside the Friends tab. Deleting your data does not cancel a subscription. Subscriptions are cancelled in iOS Settings.</p>
 
 <h2>Children</h2>
 <p>The app is intended for people aged 13 and up. We do not knowingly collect any data from children under 13. If you believe a child under 13 has used the app, email us and we will delete any related usage events.</p>
