@@ -30,7 +30,7 @@
 </head>
 <body>
 <h1>Life Flip privacy policy</h1>
-<p class="meta">Version 1.3. Effective October 23, 2026.</p>
+<p class="meta">Version 1.4. Effective October 23, 2026.</p>
 
 <h2>The short version</h2>
 <p>Everything you put into the app stays on your iPhone. The climb needs no account, and no server of ours ever receives your plan, your quests or your answers. The one exception is the optional Friends tab: if you sign in there, the name you choose and the completions you decide to share are stored so your friends can see them. The only things that leave your phone are a small set of anonymous usage events, crash reports when the app fails, the purchase record Apple creates when you subscribe, and ad measurement signals that tell us which ad, if any, brought you to the app. We do not sell data and we do not show ads.</p>
@@ -44,7 +44,7 @@
   <li>Your weekly reflections.</li>
   <li>What you keep in Tools: food log entries and calories, water glasses, workouts, focus and breathing sessions, journal lines and the photos you attach to them, and your reading list.</li>
   <li>The pledge you sign and the note you write to your future self during setup.</li>
-  <li>Your settings: reminder times, appearance, day start hour and whether usage statistics are on.</li>
+  <li>Your settings: reminder times, appearance and day start hour.</li>
 </ul>
 <p>This data rides along in your normal iPhone backup under your control. The app does not sync it to iCloud or to anyone else in this version. You can export a copy or delete all of it at any time from Profile inside the app.</p>
 
@@ -56,11 +56,11 @@
   <li>Purchase steps: that a plan button was tapped, that the yearly offer behind the close button was shown or declined, that a checkout was closed without buying, that a free trial started, that a purchase or restore unlocked the app, and which plan was chosen along with its displayed price.</li>
   <li>Daily progress: that a quest was marked done or skipped (the quest id from our pool or the word custom, its difficulty and the skip reason), that all of a day's quests were done (the day number and how many quests were done out of how many), and that a rest day was used.</li>
   <li>Milestones: that your streak reached 7, 14, 21, 30, 44 or 66 days, that a phase was completed, that the full challenge was completed, that a challenge was reset or the program was switched.</li>
-  <li>Permissions and surfaces: whether you allowed notifications, your answer to the tracking permission, that a widget was added, that the system review prompt was shown, and that usage statistics were turned off.</li>
+  <li>Permissions and surfaces: whether you allowed notifications, your answer to the tracking permission, that a widget was added, and that the system review prompt was shown.</li>
 </ul>
 <p>Alongside these events the app keeps eight labels: your plan (free, monthly or yearly), your program, your difficulty, whether notifications are allowed, which pricing group you are in (with or without a free trial), whether the paywall can be closed without subscribing, your answer to the tracking permission, and the kind of source that brought you to the app (organic, Meta, TikTok, Apple Ads or other). RevenueCat, which records purchases for us, places new customers in a pricing group at random. The events travel with a random app instance identifier that is not linked to your name, email or Apple account. Firebase receives no advertising identifier and ad personalization is turned off in Firebase.</p>
 <p>The following never leave your phone: your quiz answers, reflection text, wake or sleep times, your day by day history, everything you keep in Tools (food log, water, workouts, focus and breathing sessions, journal lines and photos, reading list), your signed pledge, the note to your future self, and any name you type on your certificate. Quest titles, including the ones you write yourself, stay on your phone too, unless you switch on sharing in Friends, described below.</p>
-<p>You can turn usage statistics off at any time in Profile with the Share usage statistics switch. After that the app sends one final event saying you opted out and nothing more. The same switch also limits ad measurement sharing, as described below.</p>
+<p>Usage statistics are part of the app, and there is no switch to turn them off. Your answer to the tracking permission, described below, still decides whether the iPhone advertising identifier is ever read or shared. To have the usage events from your install deleted, email us as described under How long data is kept.</p>
 
 <h2>Crash reports</h2>
 <p>If the app crashes, Firebase Crashlytics, also run by Google, receives a crash report so we can fix the problem. A report contains the device model, iOS version, app version, a timestamp and a technical trace of what the code was doing. It never contains your plan, quests, answers or reflections.</p>
@@ -77,7 +77,7 @@
   <li>For Apple Ads, RevenueCat passes Apple's own attribution token to Apple, which answers whether an Apple Ads campaign led to the install. This works without the tracking permission and carries no advertising identifier.</li>
 </ul>
 <p>The app asks once, on the welcome screen or later on Home, whether it may track you across other apps and websites using the iPhone tracking permission. If you allow it, the IDFA is shared with Adjust and Meta for ad measurement. If you decline, the IDFA is never read or shared, and the app works exactly the same. The app itself sends Meta no event and no identifier from your device before you answer; at launch the Meta tool only loads its own settings from Meta. Without the IDFA, installs, trials and subscriptions are still sent under the other identifiers above (the Adjust and vendor identifiers and the anonymous Meta install identifier), so the ad networks can count which ads worked.</p>
-<p>To limit ad measurement sharing, turn off Share usage statistics in Profile. Adjust then stops passing anything to Meta and TikTok, the IDFA is no longer shared with Meta, and Meta is told to limit how it uses data from the app. RevenueCat still reports trial and subscription events to Meta and Adjust from its servers, under the identifiers it already holds. To stop that too, email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. Turning the switch back on restores the rest.</p>
+<p>There is no switch in the app for ad measurement sharing. RevenueCat reports trial and subscription events to Meta and Adjust from its servers, under the identifiers it already holds. To have ad measurement sharing limited for your install, or to have the usage and measurement data about your install deleted, email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. These identifiers are not linked to your name, so we may ask for a detail that helps us find your install.</p>
 
 <h2>Apple Health, only if you connect it</h2>
 <p>If you tap Connect Apple Health, the app asks iOS for read access to your steps, sleep and workouts. It reads the last 14 days to suggest starting targets and to tick a quest the phone already saw you do. Health data is processed on your iPhone only: it is never sent to us or to any third party, never used for advertising or marketing, and never stored in iCloud by the app. The app never writes to Health. Stop reading Health, on the same screen, clears the summary; you can also remove access in the Health app.</p>
@@ -95,11 +95,11 @@
   <li>Adjust measures which ads lead to installs and subscriptions and passes install and subscription events to Meta and TikTok.</li>
   <li>Meta and TikTok receive the ad measurement signals described above.</li>
 </ul>
-<p>Each of these providers is bound to protect this data. Google, Apple, RevenueCat and Adjust use it only to provide their service to us. Meta and TikTok use ad measurement signals under their own terms and privacy policies, which is why the tracking permission and the Usage statistics switch exist. No one else receives any data from the app.</p>
+<p>Each of these providers is bound to protect this data. Google, Apple, RevenueCat and Adjust use it only to provide their service to us. Meta and TikTok use ad measurement signals under their own terms and privacy policies, which is why the tracking permission exists. No one else receives any data from the app.</p>
 
 <h2>How long data is kept</h2>
 <p>Usage events are kept by Firebase Analytics for 14 months and then deleted automatically. A daily copy of the same events is exported to our own Google Cloud project (BigQuery) for analysis and is deleted after the same 14 months. Crash reports are kept for 90 days. Purchase records are kept for as long as needed to manage your subscription and to meet accounting rules. Your own content is not covered by any of this because it is never sent to us. It stays on your phone until you delete it. A Friends account and what you shared through it are kept until you delete the account.</p>
-<p>To have usage events already collected from your device deleted, turn off Share usage statistics in Profile and email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. We will remove them.</p>
+<p>To have usage events already collected from your device deleted, email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>. We will remove them.</p>
 
 <h2>No selling, no ads</h2>
 <p>We do not sell any data. The app shows no ads. Ad measurement, described above, only tells us which of our own ads brought you here.</p>
